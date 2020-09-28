@@ -58,3 +58,17 @@ except Exception as e:
     
 for row in rows:
     print (row.year, row.album_name, row.artist_name)
+
+    
+##TO-DO: Complete the select statement to run the query 
+query = "Music"
+try:
+    rows = session.execute(query)
+except Exception as e:
+    print(e)
+    
+for row in rows:
+    print (row.year, row.album_name, row.artist_name)
+    
+session.shutdown()
+cluster.shutdown()
